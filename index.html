@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTG Card Browser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Magic: The Gathering Card Browser</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Search</h2>
+            <input type="text" id="searchBox" placeholder="Enter card name...">
+            <select id="colorFilter">
+                <option value="">All Colors</option>
+                <option value="W">White</option>
+                <option value="G">Green</option>
+                <option value="U">Blue</option>
+                <option value="R">Red</option>
+                <option value="B">Black</option>
+                <option value="C">Colorless</option>
+            </select>
+            <button id="search" onClick="fetchData()">Search</button>
+        </section>
+
+        <section>
+            <h2>Results</h2>
+            <div id="results"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
