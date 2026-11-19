@@ -39,12 +39,26 @@ header {
     box-shadow: 0 10px 10px rgba(0,0,0,0.8);
 }
 
+.title h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.title p {
+    margin: 3px 0 0;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--secondary-text);
+}
+
 header h1 {
     margin: 0;
     font-size: 32px;
-    font-weight: 800;
     letter-spacing: 2px;
-    text-transform: uppercase;
 }
 
 #search {
