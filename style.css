@@ -9,7 +9,7 @@
     --primary-text: rgb(230, 230, 230);
     --secondary-text: #aaa;
     --button-color: #640168;
-    --highlighted-text: #c300ff;
+    --highlighted-text: #75D9FF;
 }
 
 body {
@@ -239,6 +239,7 @@ footer p {
 
 footer a {
     color: var(--highlighted-text);
+    font-weight: 600;
     text-decoration: none;
 }
 
