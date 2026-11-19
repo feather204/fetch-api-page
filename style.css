@@ -1,15 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+:root {
+    --background: #111111;
+    --secondary-background: rgb(41, 41, 41);
+    --tertiary-background: #252525;
+    --card-background: #1f1f1f;
+    --border-color: #1b1b1b;
+    --primary-text: rgb(230, 230, 230);
+    --secondary-text: #aaa;
+    --button-color: #640168;
+    --highlighted-text: #9c00cc;
+}
+
+body {
+    font-family: 'Sora', sans-serif;
+    background-color: var(--background);
+    color: var(--primary-text);
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+header {
+    position: sticky;
+    top: 10px;
+    z-index: 1000;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 10px 0;
+    padding: 20px 20px;
+    border-radius: 5px;
+    border: 2px solid var(--border-color);
+    background-color: var(--secondary-background);
+    box-shadow: 0 10px 10px rgba(0,0,0,0.8);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#search {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#search h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+#search input,
+#search select,
+#search button {
+    width: 125px;
+    height: 38px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--primary-text);
+}
+
+#search input,
+#search select {
+    padding: 0 12px;
+    background-color: var(--tertiary-background);
+    border: 1px solid var(--border-color);
+
+}
+
+#search input {
+    width: 300px;
+}
+
+#search button {
+    padding: 0 20px;
+    background-color: var(--button-color);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.2s ease;
+}
+
+#search button:hover {
+    background-color: color-mix(in oklch, var(--button-color) 85%, white);;
+    transform: scale(1.05);
+}
+
+#result-section {
+    flex: 1;
+    padding: 25px 30px;
+}
+
+#result-section h2 {
+    font-size: 26px;
+    margin: 0 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border-color);
+}
+
 #results {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 
 .card {
-    width: 200px;
+    width: 250px;
+    padding: 15px;
     text-align: center;
+    background-color: var(--card-background);
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.card--w {
+    background-color: #3a392e;
+}
+
+.card--u {
+    background-color: #293a4a;
+}
+
+.card--b {
+    background-color: #302b32;
+}
+
+.card--r {
+    background-color: #482e2b;
+}
+
+.card--g {
+    background-color: #2e3b2e;
+}
+
+.card--c {
+    background-color: #353535;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
 .card img {
+    display: block;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 18px;
+}
+
+.card h3 {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 10px;
+    padding: 0px 10px;
+    background-color: var(--tertiary-background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.card p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 10px auto;
+}
+
+.mana-symbol {
+    width: 17px;
+    height: 17px;
+    margin: 0;
+}
+
+.card-info {
+    text-align: left;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.card-info p {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--secondary-text);
+}
+
+.card-info strong {
+    color: var(--primary-text);
+    min-width: 40px;
+}
+
+footer {
+    margin-top: auto;
+    padding: 20px;
+    background-color: var(--secondary-background);
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    font-size: 13px;
+    color: var(--secondary-text);
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: var(--highlighted-text);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }

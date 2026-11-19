@@ -3,18 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MTG Card Browser</title>
+    <title>MTG Card Search</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Magic: The Gathering Card Browser</h1>
-    </header>
-
-    <main>
-        <section>
-            <h2>Search</h2>
-            <input type="text" id="searchBox" placeholder="Enter card name...">
+        <h1>MTG Card Search</h1>
+        <div id="search">
+            <input type="text" id="searchBox" placeholder="Enter card name (ex. Lightning Bolt)">
             <select id="colorFilter">
                 <option value="">All Colors</option>
                 <option value="W">White</option>
@@ -24,14 +20,22 @@
                 <option value="B">Black</option>
                 <option value="C">Colorless</option>
             </select>
-            <button id="search" onClick="fetchData()">Search</button>
-        </section>
+            <button type="button" id="searchButton" onClick="fetchData()">Search</button>
+            <button type="button" id="clearButton" onClick="clearResults()">Clear</button>
+        </div>
+    </header>
 
-        <section>
+    <main>
+        <section id="result-section">
             <h2>Results</h2>
             <div id="results"></div>
         </section>
     </main>
+
+    <footer>
+        <p>Magic: The Gathering is owned by Wizards of the Coast.</p>
+        <p>Card data pulled from the <a href="https://scryfall.com/docs/api">Scryfall</a> API.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
